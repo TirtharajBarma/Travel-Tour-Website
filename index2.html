@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Search Functionality</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+<input type="text" id="search-box" placeholder="Search...">
+<label for="search-box" class="fas fa-search" id="search-icon"></label>
+
+<div id="shop-section">
+    <h2>Shop Section</h2>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </ul>
+</div>
+
+<div id="package-section">
+    <h2>Package Section</h2>
+    <ul>
+        <li>Package 1</li>
+        <li>Package 2</li>
+        <li>Package 3</li>
+        <li>Package 4</li>
+    </ul>
+</div>
+
+<script>
+document.getElementById('search-icon').addEventListener('click', function() {
+    var searchText = document.getElementById('search-box').value.toLowerCase();
+    var shopItems = document.querySelectorAll('#shop-section li');
+    var packageItems = document.querySelectorAll('#package-section li');
+
+    // Function to hide elements that do not match the search query
+    function filterItems(items) {
+        items.forEach(function(item) {
+            if (item.textContent.toLowerCase().includes(searchText)) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    }
+
+    // Filter items in the shop section
+    filterItems(shopItems);
+
+    // Filter items in the package section
+    filterItems(packageItems);
+});
+</script>
+
+</body>
+</html>

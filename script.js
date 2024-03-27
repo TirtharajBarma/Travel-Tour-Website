@@ -1,5 +1,4 @@
 let navbar = document.querySelector('.header .navbar');
-
 document.querySelector('#menu-btn').onclick = () => {
     navbar.classList.add('active');
 }
@@ -8,8 +7,8 @@ document.querySelector('#nav-close').onclick = () => {
     navbar.classList.remove('active');
 }
 
+//* search form
 let searchForm = document.querySelector('.search-form');
-
 document.querySelector('#search-btn').onclick = () => {
     searchForm.classList.add('active');
 }
@@ -37,4 +36,8 @@ window.onload = () => {
             document.querySelector('.header').classList.remove('active');
         }
     }
+}
+
+function redirectToRegistration() {
+    window.location.href = "registration.html";
 }
