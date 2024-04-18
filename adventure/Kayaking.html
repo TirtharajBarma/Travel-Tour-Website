@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kayaking</title>
+    <link rel="shortcut icon" href="/assets/—Pngtree—red single cabin kayak clipart_5988566.png" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <style>
+      /* Custom CSS */
+
+      :root {
+        --green-color: #219150;
+        --black-color: #10221b;
+        --white-color: #fff;
+        --light-bg: #eee;
+        --border: 0.1rem solid #10221b;
+        --box-shadow: 0 0.5 1rem rgba(0, 0, 0, 0.1);
+      }
+
+      body {
+        font-size: 1.4rem;
+      }
+
+      .half-image {
+        width: calc(40% - 100px); /* Adjust the width as needed */
+        height: 70vh; /* Adjust the height as needed */
+        background-image: url("https://media.istockphoto.com/id/1070181118/photo/whitewater-kayaking-extreme-kayaking-a-guy-in-a-kayak-sails-on-a-mountain-river.jpg?s=612x612&w=0&k=20&c=DvIrUla0OpwBmSVlIxETO-rJDGDVHvPu1_qw0gSjJmU="); /* Replace 'sharks.jpg' with your image path */
+        background-size: cover;
+        background-position: center top; /* Adjust the image position from top */
+        margin-left: 100px; /* Adjust the gap size */
+      }
+
+      .half-content {
+        height: 70vh; /* Full height of viewport */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* align-items: center; */
+      }
+
+      .container-fluid {
+        margin-top: 10%;
+        background-color: #eee;
+      }
+
+      .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 2rem 9%;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+        transition: background-color 0.3s ease; /* Add transition effect for background-color */
+      }
+
+      .header.active {
+        background-color: #fff; /* Change background color to white when active */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow when active */
+      }
+
+      .header.active .logo,
+      .header.active .navbar a,
+      .header.active .icons a,
+      .header.active .icons div {
+        color: var(--black-color); /* Change text color to black when active */
+      }
+
+      .logo {
+        margin-right: auto;
+        font-size: 2.5rem;
+        color: var(--black-color);
+        font-weight: bolder;
+        text-decoration: none;
+      }
+
+      .logo i {
+        color: var(--green-color);
+      }
+
+      .navbar a {
+        margin-left: 2rem;
+        font-size: 1.7rem;
+        color: var(--black-color);
+        text-decoration: none;
+      }
+
+      .navbar a:hover {
+        color: var(--green-color);
+      }
+
+      #nav-close {
+        font-size: 3.5rem;
+        cursor: pointer;
+        color: var(--black-color);
+        display: none;
+      }
+
+      /* Button styling */
+      /* Button styling */
+      .btn-group {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        width: 50%;
+      }
+
+      .btn-book-now,
+      .btn-contact-us {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        outline: none;
+        flex: 1; /* Make the buttons take equal space */
+        margin: 0 5px; /* Adjust margin to remove gap */
+      }
+
+      .btn-book-now {
+        background-color: var(--black-color);
+        color: var(--white-color);
+      }
+
+      .btn-contact-us {
+        background-color: var(--white-color);
+        color: var(--black-color);
+        border: 1px solid var(--black-color);
+      }
+
+      .container-fluid-second {
+        margin-top: 10%;
+      }
+
+      .container-fluid-second .half-content {
+        padding-left: 5%;
+      }
+
+      .next-section {
+        text-align: center;
+        margin-top: 10%;
+      }
+
+      .next-section p {
+        margin-bottom: 30px;
+      }
+
+      .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .image-container img {
+        width: 100px; /* Adjust the width as needed */
+        height: 100px; /* Ensure the height matches the width to create a circle */
+        margin: 0 20px; /* Adjust the margin between images */
+        border-radius: 50%; /* Make the images circular */
+      }
+
+      .container-fluid h1,
+      .container-fluid-second h1 {
+        font-weight: bold;
+        font-size: 4.5rem;
+        padding-bottom: 5%;
+      }
+
+      .container-fluid p,
+      .container-fluid-second p {
+        font-size: 15px;
+      }
+
+      .next-section h1 {
+        font-weight: bold;
+        font-size: xx-large;
+        padding-bottom: 3%;
+      }
+      .container-fluid i {
+        margin-bottom: 10px;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideUp {
+        from {
+          transform: translateY(50px);
+        }
+        to {
+          transform: translateY(0);
+        }
+      }
+
+      /* Apply animations to specific elements */
+      .half-content,
+      .container-fluid-second .half-content,
+      .next-section {
+        animation: fadeIn 1.5s ease-in-out;
+      }
+
+      .container-fluid-second .half-content,
+      .next-section {
+        animation-delay: 0.5s;
+      }
+
+      .next-section {
+        animation-name: slideUp;
+        animation-duration: 1s;
+        animation-delay: 0.5s;
+        animation-fill-mode: both;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header" id="header">
+      <a href="#" class="logo"><i class="fas fa-hiking"></i> JourneyScape </a>
+
+      <nav class="navbar">
+        <div id="nav-close" class="fas fa-times"></div>
+        <a href="/index.html">home</a>
+        <a href="/about.html">about</a>
+        <a href="/index.html#shop">shop</a>
+        <a href="/package.html">packages</a>
+        <a href="/index.html#reviews">review</a>
+        <a href="#blogs">blogs</a>
+      </nav>
+
+      <div class="icons">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <a href="#shop" class="fas fa-shopping-cart"></a>
+        <div id="search-btn" class="fas fa-search"></div>
+        <div
+          id="user"
+          class="fa-regular fa-user"
+          onclick="redirectToRegistration()"
+        ></div>
+      </div>
+    </header>
+
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Half with image -->
+        <div class="col-md-6 p-0 half-image"></div>
+        <!-- Half with content -->
+        <div class="col-md-6 p-5 half-content">
+          <h1>Kayaking Adventures</h1>
+          <i>October 12, 2023</i>
+          <p>
+            Embark on an exhilarating journey through the pristine waters with
+            our Kayaking Adventures! Whether you're a seasoned paddler or a
+            novice explorer, our kayaking experiences offer something for
+            everyone. Get ready to immerse yourself in nature, witness
+            breathtaking landscapes, and create unforgettable memories on the
+            water.
+          </p>
+          <br />
+
+          <p>
+            Our Kayaking Adventures start at Rs. 2700 per person, making it an
+            affordable option for all adventure enthusiasts. Group discounts are
+            available for larger parties, so grab your friends and family for an
+            unforgettable day on the water.
+          </p>
+          <!-- Button group -->
+          <div class="btn-group">
+            <button class="btn-book-now" onclick="redirectToIndex()">Book Now</button>
+            <button class="btn-contact-us" onclick="openContactForm()">
+              Contact Us
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid-second">
+      <div class="row">
+        <!-- Second section -->
+        <div class="col-md-6 p-5 half-content">
+          <p>Adventure</p>
+          <h1>Experience the Ultimate Thrill</h1>
+          <p>
+            Sunset and Sunrise Tours: Witness nature's spectacular displays with
+            our sunset and sunrise kayaking tours. Paddle under the golden hues
+            of the setting sun or the soft glow of dawn, adding a touch of magic
+            to your adventure. Capture stunning photos as the sky transforms
+            into a canvas of colors, creating unforgettable moments to cherish.
+          </p>
+          <br />
+
+          <p>
+            Duration: Choose from half-day or full-day kayaking excursions,
+            ranging from 4 to 8 hours in duration. Each trip is carefully
+            curated to provide you with the perfect balance of exploration,
+            relaxation, and adventure.
+          </p>
+          <!-- Button group -->
+          <div class="btn-group">
+            <button class="btn-book-now" onclick="redirectToIndex()">Book Now</button>
+            <button class="btn-contact-us" onclick="openContactForm()">
+              Contact Us
+            </button>
+          </div>
+        </div>
+        <div class="col-md-6 p-0 half-image"></div>
+      </div>
+    </div>
+
+    <div class="next-section">
+      <h1>Join Our Community</h1>
+      <p>
+        Connect with fellow adventurers, share your experiences, and stay
+        updated on the latest expeditions.
+      </p>
+      <div class="image-container">
+        <img
+          src="https://i.pinimg.com/474x/85/81/42/8581425e8ea241666d6583d1f327fdf8.jpg"
+          alt="Image 1"
+        />
+        <img
+          src="https://i.pinimg.com/474x/64/a6/ab/64a6abf80ea3ec75ef0a6c0447f30d51.jpg"
+          alt="Image 2"
+        />
+        <img
+          src="https://i.pinimg.com/474x/88/08/b8/8808b840ef5f755396e2b8f465e3d4bf.jpg"
+          alt="Image 3"
+        />
+        <img
+          src="https://i.pinimg.com/474x/89/1c/e8/891ce88cac43afadd7da91fb409a4cb3.jpg"
+          alt="Image 4"
+        />
+        <img
+          src="https://i.pinimg.com/474x/b1/c3/c3/b1c3c3695554ae7c83bcb30efe246d1d.jpg"
+          alt="Image 5"
+        />
+      </div>
+    </div>
+
+    <script>
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        var header = document.getElementById("header");
+        if (
+          document.body.scrollTop > 80 ||
+          document.documentElement.scrollTop > 80
+        ) {
+          header.classList.add("active");
+        } else {
+          header.classList.remove("active");
+        }
+      }
+
+      function redirectToRegistration() {
+        window.location.href = "";
+      }
+
+      function openContactForm() {
+        window.location.href =
+          "mailto:your@email.com?subject=Inquiry%20About%20Kayaking&body=Dear%20Team,%0A%0AI%20am%20interested%20in%20learning%20more%20about%20your%20Kayaking%20packages.%20Please%20provide%20me%20with%20more%20information.%0A%0AThank%20you,%0A[Your%20Name]";
+      }
+
+      function redirectToIndex() {
+        window.location.href = "Activity-booking.html";
+      }
+    </script>
+
+    <script src="/script.js"></script>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
