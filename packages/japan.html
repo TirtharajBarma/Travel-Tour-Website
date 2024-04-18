@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Japan</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="/style.css" />
+
+    <style>
+      .logo,
+      .navbar a {
+        text-decoration: none;
+      }
+
+      .container-fluid {
+        background-image: url("https://images.unsplash.com/photo-1528164344705-47542687000d?q=80&w=2984&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin-bottom: 5%;
+      }
+
+      .content-packages {
+        padding: 20px;
+        border-radius: 10px;
+        color: #fff;
+      }
+
+      .content-packages h1 {
+        font-size: 8rem;
+        color: #219150;
+      }
+
+      .content-packages p {
+        font-size: 1.5rem;
+        color: #10221b;
+      }
+
+      .tower-section h4 {
+        font-size: 2.3rem;
+        color: #219150;
+      }
+
+      .tower-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        margin-top: 0.5%;
+        background-color: #eee;
+        border-radius: 10px;
+      }
+
+      .tower-section p {
+        font-size: 1.4rem;
+      }
+
+      .tower-content {
+        flex: 1;
+      }
+
+      .tower-image {
+        flex: 1;
+        text-align: right; /* Aligns content to the right */
+      }
+
+      .tower-content .location {
+        background-image: url("/assets/placeholder.png");
+        background-repeat: no-repeat;
+        background-size: 18px; /* Adjust the size of the logo */
+        background-position: left center;
+        padding-left: 30px; /* Adjust the space between the logo and text */
+        font-size: 15px; /* Small font size for the location */
+        color: #10221b; /* Text color */
+      }
+
+      @keyframes slideInFromLeft {
+        from {
+          transform: translateX(-100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .content h1 {
+        animation: slideInFromLeft 1s ease-in-out forwards;
+      }
+
+      .col-md-6:nth-child(2) .btn {
+        animation: fadeIn 1s ease-in-out forwards;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header" id="header">
+      <a href="#" class="logo"><i class="fas fa-hiking"></i> JourneyScape </a>
+
+      <nav class="navbar">
+        <div id="nav-close" class="fas fa-times"></div>
+        <a href="/index.html">home</a>
+        <a href="/about.html">about</a>
+        <a href="/index.html#shop">shop</a>
+        <a href="/package.html">packages</a>
+        <a href="/index.html#reviews">review</a>
+        <a href="#blogs">blogs</a>
+      </nav>
+
+      <div class="icons">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <a href="#shop" class="fas fa-shopping-cart"></a>
+        <div id="search-btn" class="fas fa-search"></div>
+        <div
+          id="user"
+          class="fa-regular fa-user"
+          onclick="redirectToRegistration()"
+        ></div>
+      </div>
+    </header>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="content-packages">
+            <h1>Japan</h1>
+            <p class="fade-in">
+              Japan, a fascinating blend of ancient traditions and futuristic
+              innovation, beckons with its iconic cherry blossoms, exquisite
+              cuisine, and serene temples.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 d-flex align-items-center justify-content-center">
+          <a href="#tower-section" class="btn btn-dark">Explore now</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="tower-section" id="tower-section">
+      <div class="tower-content">
+        <p class="location">Japan</p>
+        <h4>Tokyo</h4>
+        <p>
+          A bustling metropolis where skyscrapers stand alongside historic
+          temples and gardens. Experience the vibrant street life of Shibuya,
+          the tranquil beauty of Meiji Shrine, and the cutting-edge technology
+          of Akihabara
+        </p>
+      </div>
+      <div class="tower-image">
+        <a href="/booking form.html" class="btn btn-dark">Book Now</a>
+      </div>
+    </div>
+
+    <div class="tower-section">
+      <div class="tower-content">
+        <p class="location">Japan</p>
+        <h4>Kyoto</h4>
+        <p>
+          Delve into Japan's rich cultural heritage in the former imperial
+          capital. Wander through the enchanting streets of Gion, where geishas
+          gracefully glide past wooden tea houses. Explore majestic temples like
+          Kinkaku-ji (Golden Pavilion)
+        </p>
+      </div>
+      <div class="tower-image">
+        <a href="/booking form.html" class="btn btn-dark">Book Now</a>
+      </div>
+    </div>
+
+    <div class="tower-section">
+      <div class="tower-content">
+        <p class="location">Japan</p>
+        <h4>Hiroshima</h4>
+        <p>
+          Reflect on history and peace at Hiroshima's Peace Memorial Park, a
+          poignant reminder of the city's tragic past. Explore the picturesque
+          Miyajima Island, home to the iconic floating torii gate of Itsukushima
+          Shrine.
+        </p>
+      </div>
+      <div class="tower-image">
+        <a href="/booking form.html" class="btn btn-dark">Book Now</a>
+      </div>
+    </div>
+
+    <script>
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        var header = document.getElementById("header");
+        if (
+          document.body.scrollTop > 80 ||
+          document.documentElement.scrollTop > 80
+        ) {
+          header.classList.add("active");
+        } else {
+          header.classList.remove("active");
+        }
+      }
+
+      function redirectToRegistration() {
+        window.location.href = "";
+      }
+
+      function openContactForm() {
+        window.location.href =
+          "mailto:your@email.com?subject=Inquiry%20About%20Kayaking&body=Dear%20Team,%0A%0AI%20am%20interested%20in%20learning%20more%20about%20your%20Kayaking%20packages.%20Please%20provide%20me%20with%20more%20information.%0A%0AThank%20you,%0A[Your%20Name]";
+      }
+    </script>
+    <script src="/script.js"></script>
+  </body>
+</html>
