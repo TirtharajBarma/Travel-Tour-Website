@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <style>
+      :root {
+        --green-color: #219150;
+        --black-color: #10221b;
+        --white-color: #fff;
+        --light-bg: #eee;
+        --border: 0.1rem solid #10221b;
+        --box-shadow: 0 0.5 1rem rgba(0, 0, 0, 0.1);
+      }
+
+      #menu-btn {
+        display: none;
+      }
+
+      .values,
+      .services {
+        text-align: left; /* Left align text in sections */
+      }
+
+      .values p,
+      .services p {
+        margin-bottom: 20px; /* Increase spacing between paragraphs */
+      }
+
+      .values ul,
+      .services ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .values li,
+      .services li {
+        margin-bottom: 10px;
+      }
+
+      .values h2,
+      .services h2 {
+        font-size: 2em; /* Larger font size for section headings */
+        margin-bottom: 10px;
+        color: #343a40; /* Dark text color for headings */
+      }
+
+      html {
+        font-size: 62.5%;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+        scroll-padding-top: 5rem;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        text-align: center; /* Center align all text */
+        background-color: #f8f9fa; /* Light background color */
+        color: #333; /* Text color */
+        font-size: 120%;
+      }
+
+      header {
+        padding: 20px;
+        text-align: center;
+        color: #fff; /* Text color in header */
+      }
+
+      h1 {
+        font-size: 3em; /* Larger font size for heading */
+        margin-bottom: 0;
+      }
+
+      main {
+        padding: 20px;
+      }
+
+      section {
+        margin-bottom: 20px;
+        text-align: left; /* Left align text in sections */
+      }
+
+      h2 {
+        font-size: 2em; /* Larger font size for section headings */
+        margin-bottom: 10px;
+        color: #343a40; /* Dark text color for headings */
+      }
+
+      .mission h1 {
+        color: var(--green-color);
+      }
+
+      p {
+        line-height: 1.6;
+        font-size: 1.2em; /* Larger font size for paragraphs */
+        margin-bottom: 20px; /* Increase spacing between paragraphs */
+      }
+
+      .team {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around; /* Center align team members */
+      }
+
+      .team-member {
+        width: calc(25% - 20px);
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .team-member img {
+        width: 150px; /* Adjust image size */
+        height: 150px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+      }
+
+      .awards ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .awards li {
+        margin-bottom: 10px;
+        font-size: 1.2em; /* Larger font size for awards */
+        color: #007bff; /* Blue color for awards */
+      }
+
+      .mission {
+        padding-top: 130px;
+        margin-top: 200px; /* Add margin top to increase gap between header and mission section */
+      }
+
+      .mission h1 {
+        margin-bottom: 20px; /* Adjust this value to increase or decrease the gap */
+      }
+
+      .mission p {
+        margin-top: 20px; /* Adjust this value to increase or decrease the gap */
+      }
+
+      .history h2 {
+        margin-bottom: 20px; /* Adjust this value to increase or decrease the gap */
+      }
+
+      .history p {
+        margin-top: 20px; /* Adjust this value to increase or decrease the gap */
+      }
+
+      .mission,
+      .history {
+        margin: 0 auto; /* Center the sections */
+        max-width: 1500px; /* Limit the width of the sections */
+        text-align: center; /* Center align the content */
+      }
+
+      .values {
+        text-align: center; /* Center align the section content */
+      }
+
+      .values-list {
+        list-style: none;
+        padding: 0;
+        display: flex; /* Change display to flex */
+        flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
+        justify-content: space-around; /* Space out the list items */
+        gap: 30px; /* Adjust the gap between list items */
+      }
+
+      .values-list ul {
+        list-style: none;
+        padding: 0;
+        display: flex; /* Align list items horizontally */
+        flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
+        justify-content: space-around; /* Space out the list items */
+      }
+
+      .values-list li {
+        width: calc(25% - 20px); /* Adjust width of list items */
+        text-align: center; /* Center align the content */
+      }
+
+      .values-list li img {
+        width: 150px; /* Adjust image size */
+        height: 140px;
+        border-radius: 50%; /* Make the image rounded */
+        margin-bottom: 10px; /* Add spacing below the image */
+      }
+
+      .values-list li p {
+        font-size: 1.2em; /* Adjust paragraph font size */
+        margin-bottom: 0; /* Remove default margin */
+      }
+
+      .services {
+        text-align: center; /* Center align the section content */
+      }
+
+      .services p {
+        margin-bottom: 20px; /* Increase spacing between paragraphs */
+      }
+
+      .services-list {
+        list-style: none;
+        padding: 0;
+        display: flex; /* Align list items horizontally */
+        flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
+        justify-content: space-around; /* Space out the list items */
+      }
+
+      .services-list li {
+        width: calc(25% - 20px); /* Adjust width of list items */
+        text-align: center; /* Center align the content */
+        margin-bottom: 20px; /* Add margin to the bottom of the list items */
+      }
+
+      .services-list li img {
+        width: 100px; /* Adjust image size */
+        height: 100px;
+        border-radius: 50%; /* Make the image rounded */
+        margin-bottom: 10px; /* Add spacing below the image */
+      }
+
+      .services-list li p {
+        font-size: 1.2em; /* Adjust paragraph font size */
+        margin-bottom: 0; /* Remove default margin */
+      }
+
+      @keyframes slideIn {
+        from {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Apply the animation to specific elements */
+      .animated-text {
+        animation: slideIn 0.5s ease forwards;
+      }
+
+      @media screen and (max-width: 768px) {
+        /* Navigation */
+        .navbar {
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: #fff;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          transform: translateY(-100%);
+          transition: transform 0.3s ease-in-out;
+        }
+
+        .navbar.active {
+          transform: translateY(0);
+        }
+
+        .navbar a {
+          margin: 1rem 0;
+        }
+
+        .icons {
+          display: none;
+        }
+
+        #menu-btn {
+          display: block;
+        }
+
+        #nav-close {
+          display: block;
+        }
+
+        /* Header */
+        .header {
+          padding: 1rem 5%;
+        }
+
+        .logo {
+          font-size: 2rem;
+        }
+
+        /* Sections */
+        .mission,
+        .history,
+        .about,
+        .values,
+        .services,
+        .team,
+        .awards {
+          padding: 20px;
+        }
+
+        /* Images */
+        .about .image img {
+          width: 100%;
+        }
+
+        /* Footer */
+        .footer .box {
+          margin-bottom: 20px;
+          text-align: center;
+        }
+
+        .footer .credit {
+          font-size: 0.8em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="logo"><i class="fas fa-hiking"></i> JourneyScape </a>
+
+      <nav class="navbar">
+        <div id="nav-close" class="fas fa-times"></div>
+        <a href="/index.html">home</a>
+        <a href="#">about</a>
+        <a href="/index.html#shop">shop</a>
+        <a href="/package.html">packages</a>
+        <a href="/index.html#reviews">review</a>
+        <a href="/blogs.html">blogs</a>
+      </nav>
+
+      <div class="icons">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <a href="/index.html#shop" class="fas fa-shopping-cart"></a>
+        <div id="search-btn" class="fas fa-search"></div>
+        <div
+          id="user"
+          class="fa-regular fa-user"
+          onclick="redirectToRegistration()"
+        ></div>
+      </div>
+    </header>
+
+    <div class="search-form">
+      <div id="close-search" class="fas fa-times"></div>
+
+      <form action="">
+        <input
+          type="search"
+          name=""
+          id="search-box"
+          placeholder="search here..."
+        />
+        <label for="search-box" class="fas fa-search"></label>
+      </form>
+    </div>
+
+    <main>
+      <section class="mission">
+        <h1 class="animated-text">Our Mission</h1>
+        <p class="animated-text">
+          To connect the world through travel and make it accessible to all.
+        </p>
+      </section>
+
+      <section class="history">
+        <h2 class="animated-text">Our History</h2>
+        <p class="animated-text">
+          Our journey began in 2010 with a simple yet ambitious goal: to make
+          travel more accessible and enjoyable for everyone. Over the years,
+          we've grown from a small startup fueled by passion to a global leader
+          in the travel industry. With a relentless focus on innovation and
+          customer satisfaction, we've stayed true to our mission while adapting
+          to the ever-changing needs of travelers worldwide.
+        </p>
+      </section>
+
+      <section class="about" id="about">
+        <div class="image">
+          <img
+            src="https://images.pexels.com/photos/4555536/pexels-photo-4555536.jpeg?auto=compress&cs=tinysrgb&w=600"
+            alt=""
+          />
+        </div>
+
+        <div class="content">
+          <h3>memorable outdoor experience</h3>
+          <p>
+            A memorable outdoor experience ignites the soul, transcending the
+            ordinary into the extraordinary. It's the rush of wind against your
+            skin as you zip line through lush canopies, the serenity of paddling
+            across tranquil waters at sunrise, and the awe-inspiring vistas that
+            etch themselves into your memory, forever enriching your spirit.
+          </p>
+          <p>
+            It's the crackle of a campfire under a star-strewn sky, the scent of
+            pine carried on a gentle breeze, and the laughter shared around a
+            cozy tent. It's the thrill of summiting a mountain peak, the
+            tranquility of a hidden waterfall, and the camaraderie forged on
+            rugged trails.
+          </p>
+          <a
+            href="https://www.wanderlust.co.uk/interests/outdoor-activities/"
+            class="btn"
+            >read more</a
+          >
+        </div>
+      </section>
+
+      <section class="values">
+        <h2>Our Values</h2>
+        <!-- Wrap the list items in a container -->
+        <div class="values-list">
+          <ul>
+            <li>
+              <img
+                src="https://i.pinimg.com/474x/e5/fb/f7/e5fbf79b003475e0579d556f2d8ae3dc.jpg"
+                alt="Customer Satisfaction"
+              />
+              <p>Customer Satisfaction</p>
+            </li>
+            <li>
+              <img
+                src="https://i.pinimg.com/474x/96/9e/90/969e90d6ca084075fcb7afc0c01b4e81.jpg"
+                alt="Innovation"
+              />
+              <p>Innovation</p>
+            </li>
+            <li>
+              <img
+                src="https://i.pinimg.com/474x/ec/10/c5/ec10c59bca0ebc8f9ffbcbf449bec8d6.jpg"
+                alt="Community Engagement"
+              />
+              <p>Community Engagement</p>
+            </li>
+            <li>
+              <img
+                src="https://i.pinimg.com/474x/6a/dc/4a/6adc4a279d983520ef3921d18f8d2e47.jpg"
+                alt="Sustainability"
+              />
+              <p>Sustainability</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="services">
+        <h2>Our Services</h2>
+        <p>We offer a range of services to cater to every traveler's needs:</p>
+        <ul class="services-list">
+          <li>
+            <img
+              src="https://i.pinimg.com/474x/3d/f6/d7/3df6d7cc4159fc5fb9ed89ee2e5cce97.jpg"
+              alt="Flight Bookings"
+            />
+            <p>Flight Bookings</p>
+          </li>
+          <li>
+            <img
+              src="https://i.pinimg.com/474x/09/ea/62/09ea623717598756895f7e5972a74688.jpg"
+              alt="Hotel Reservations"
+            />
+            <p>Hotel Reservations</p>
+          </li>
+          <li>
+            <img
+              src="https://i.pinimg.com/474x/4e/61/81/4e618199cdd922f47bcd58495b5b30a8.jpg"
+              alt="Car Rentals"
+            />
+            <p>Car Rentals</p>
+          </li>
+          <li>
+            <img
+              src="https://i.pinimg.com/474x/cb/40/9e/cb409e28b070bfa75c76edec7d06fae7.jpg"
+              alt="Travel Insurance"
+            />
+            <p>Travel Insurance</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="team">
+        <h2>Meet the Team</h2>
+        <div class="team-member">
+          <img
+            src="https://i.pinimg.com/474x/5c/5a/f9/5c5af94e34f7085a0203e91b1c0f32ae.jpg"
+            alt="John Smith - CEO"
+          />
+          <h3>John Smith</h3>
+          <p>CEO</p>
+        </div>
+        <div class="team-member">
+          <img
+            src="https://i.pinimg.com/474x/34/a2/0a/34a20ab7385fc11eb64446e036e8709b.jpg"
+            alt="Emma Johnson - Head of Operations"
+          />
+          <h3>Emma Johnson</h3>
+          <p>Head of Operations</p>
+        </div>
+        <div class="team-member">
+          <img
+            src="https://i.pinimg.com/474x/33/b2/95/33b295a1a4a1af86ce9d54f15d7d69bb.jpg"
+            alt="Mark Lee - Marketing Manager"
+          />
+          <h3>Mark Lee</h3>
+          <p>Marketing Manager</p>
+        </div>
+      </section>
+
+      <section class="awards">
+        <h2>Awards and Recognition</h2>
+        <ul>
+          <li>Best Travel Website 2018 Web Awards</li>
+          <li>Top 10 Tour Operators - Traveler's Choice Awards</li>
+          <li>Customer's Favorite - 5-star Ratings</li>
+        </ul>
+      </section>
+    </main>
+
+    <section class="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>quick links</h3>
+          <a href="/index.html">home</a>
+          <a href="/about.html">about</a>
+          <a href="/index.html#shop">shop</a>
+          <a href="/package.html">packages</a>
+          <a href="/index.html#reviews">review</a>
+          <a href="/blogs.html">blogs</a>
+        </div>
+
+        <div class="box">
+          <h3>extra links</h3>
+          <a href="/registration.html">my account</a>
+          <a href="#shop">my order</a>
+          <a href="#shop">my wishlist</a>
+          <a href="#">privacy policy</a>
+        </div>
+
+        <div class="box">
+          <h3>contact info</h3>
+          <a href="#"><i class="fas fa-phone"></i>+91-978-009-2341</a>
+          <a href="mailto:barmatirtharaj@gmail.com"
+            ><i class="fas fa-envelope"></i>barmatirtharaj@gmail.com</a
+          >
+          <a href="https://maps.google.com/?q=Phagwara, India 140001"
+            ><i class="fas fa-map"></i>Phagwara, India 140001</a
+          >
+        </div>
+
+        <div class="box">
+          <h3>follow me</h3>
+          <a href="https://twitter.com/TirtharajBarma"
+            ><i class="fab fa-twitter"></i>twitter</a
+          >
+          <a href="https://www.instagram.com/_t.irth.a_/"
+            ><i class="fab fa-instagram"></i>instagram</a
+          >
+          <a href="https://www.linkedin.com/in/tirtharaj-barma-327940236/"
+            ><i class="fab fa-linkedin"></i>linkedin</a
+          >
+          <a href="https://github.com/TirtharajBarma"
+            ><i class="fab fa-github"></i>github</a
+          >
+        </div>
+      </div>
+      <div class="credit">
+        created by <span>Tirtharaj Barma</span> | all right reserved.
+      </div>
+    </section>
+
+    <script src="/script.js"></script>
+    <script>
+      window.onscroll = () => {
+        const header = document.querySelector(".header");
+        if (window.scrollY > 0) {
+          header.classList.add("active");
+        } else {
+          header.classList.remove("active");
+        }
+      };
+
+      window.onload = () => {
+        const header = document.querySelector(".header");
+        if (window.scrollY > 0) {
+          header.classList.add("active");
+        } else {
+          header.classList.remove("active");
+        }
+      };
+
+      function redirectToRegistration() {
+        window.location.href = "registration.html";
+      }
+    </script>
+  </body>
+</html>
