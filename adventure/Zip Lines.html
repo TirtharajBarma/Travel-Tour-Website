@@ -19,8 +19,6 @@
     />
     <link rel="stylesheet" href="/style.css" />
     <style>
-
-
       :root {
         --green-color: #219150;
         --black-color: #10221b;
@@ -35,7 +33,7 @@
       }
 
       .half-image {
-        width: calc(40% - 100px); 
+        width: calc(40% - 100px);
         height: 70vh;
         background-image: url("https://media.istockphoto.com/id/1133517867/photo/riding-on-a-zip-line.jpg?s=612x612&w=0&k=20&c=wv4EJz9zdCR_ueZlfVPy_4t8-S7M0zaaVSjr4pYbbaM="); /* Replace 'sharks.jpg' with your image path */
         background-size: cover;
@@ -48,7 +46,6 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-       
       }
 
       .container-fluid {
@@ -66,11 +63,11 @@
         display: flex;
         align-items: center;
         background-color: transparent;
-        transition: background-color 0.3s ease; 
+        transition: background-color 0.3s ease;
       }
 
       .header.active {
-        background-color: #fff; 
+        background-color: #fff;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       }
 
@@ -78,7 +75,7 @@
       .header.active .navbar a,
       .header.active .icons a,
       .header.active .icons div {
-        color: var(--black-color); 
+        color: var(--black-color);
       }
 
       .logo {
@@ -111,7 +108,6 @@
         display: none;
       }
 
-      
       .btn-group {
         display: flex;
         justify-content: space-between;
@@ -126,8 +122,8 @@
         border-radius: 5px;
         cursor: pointer;
         outline: none;
-        flex: 1; 
-        margin: 0 5px; 
+        flex: 1;
+        margin: 0 5px;
       }
 
       .btn-book-now {
@@ -227,6 +223,146 @@
         animation-duration: 1s;
         animation-delay: 0.5s;
         animation-fill-mode: both;
+        margin-bottom: 5%;
+      }
+
+      .footer a {
+        text-decoration: none;
+      }
+
+      @media only screen and (max-width: 768px) {
+        .half-image {
+          width: 100%;
+          margin-left: 0;
+          height: 50vh;
+        }
+
+        .half-content {
+          padding: 2rem;
+        }
+
+        .container-fluid,
+        .container-fluid-second {
+          margin-top: 20%;
+        }
+
+        .container-fluid h1,
+        .container-fluid-second h1 {
+          font-size: 3rem;
+        }
+
+        .container-fluid p,
+        .container-fluid-second p {
+          font-size: 1.2rem;
+        }
+
+        .btn-group {
+          width: 100%;
+          margin-top: 20px
+        }
+
+        .btn-book-now,
+        .btn-contact-us {
+          margin: 10px 5px;
+        }
+
+        .image-container img {
+          width: 80px;
+          height: 80px;
+          margin: 0 10px;
+        }
+
+        .next-section {
+          margin-top: 20%;
+        }
+      }
+
+      @media only screen and (max-width: 576px) {
+        .logo {
+          font-size: 2rem;
+        }
+
+        .navbar a {
+          font-size: 1.5rem;
+        }
+
+        .header {
+          padding: 1rem 5%;
+        }
+
+        .next-section h1 {
+          font-size: 2rem;
+        }
+
+        .next-section p {
+          font-size: 1rem;
+        }
+
+        .footer {
+          padding: 2rem 0;
+        }
+
+        .footer .box-container {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .footer .box {
+          text-align: center;
+          margin-bottom: 2rem;
+        }
+
+        .footer .box h3 {
+          margin-bottom: 1rem;
+        }
+
+        .footer .box a {
+          display: block;
+          margin-bottom: 0.5rem;
+        }
+
+        .footer .credit {
+          text-align: center;
+          margin-top: 2rem;
+        }
+      }
+
+      @media only screen and (max-width: 768px) {
+        .next-section {
+          margin-top: 20%;
+        }
+
+        .next-section h1 {
+          font-size: 3rem;
+        }
+
+        .next-section p {
+          font-size: 1.2rem;
+          margin-bottom: 20px;
+        }
+
+        .image-container img {
+          width: 60px;
+          height: 60px;
+          margin: 0 5px;
+        }
+      }
+
+      @media only screen and (max-width: 576px) {
+        .next-section h1 {
+          font-size: 2rem;
+        }
+
+        .next-section p {
+          font-size: 1rem;
+          margin-bottom: 15px;
+        }
+
+        .image-container img {
+          width: 40px;
+          height: 40px;
+          margin: 0 3px;
+        }
       }
     </style>
   </head>
@@ -282,7 +418,9 @@
           </p>
           <!-- Button group -->
           <div class="btn-group">
-            <button class="btn-book-now" onclick="redirectToIndex()">Book Now</button>
+            <button class="btn-book-now" onclick="redirectToIndex()">
+              Book Now
+            </button>
             <button class="btn-contact-us" onclick="openContactForm()">
               Contact Us
             </button>
@@ -311,7 +449,9 @@
           </p>
           <!-- Button group -->
           <div class="btn-group">
-            <button class="btn-book-now" onclick="redirectToIndex()" >Book Now</button>
+            <button class="btn-book-now" onclick="redirectToIndex()">
+              Book Now
+            </button>
             <button class="btn-contact-us" onclick="openContactForm()">
               Contact Us
             </button>
@@ -350,6 +490,58 @@
         />
       </div>
     </div>
+
+    <section class="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>quick links</h3>
+          <a href="/index.html">home</a>
+          <a href="/about.html">about</a>
+          <a href="/index.html#shop">shop</a>
+          <a href="/package.html">packages</a>
+          <a href="/index.html#reviews">review</a>
+          <a href="/blogs.html">blogs</a>
+        </div>
+
+        <div class="box">
+          <h3>extra links</h3>
+          <a href="/registration.html">my account</a>
+          <a href="#shop">my order</a>
+          <a href="#shop">my wishlist</a>
+          <a href="#">privacy policy</a>
+        </div>
+
+        <div class="box">
+          <h3>contact info</h3>
+          <a href="#"><i class="fas fa-phone"></i>+91-978-009-2341</a>
+          <a href="mailto:barmatirtharaj@gmail.com"
+            ><i class="fas fa-envelope"></i>barmatirtharaj@gmail.com</a
+          >
+          <a href="https://maps.google.com/?q=Phagwara, India 140001"
+            ><i class="fas fa-map"></i>Phagwara, India 140001</a
+          >
+        </div>
+
+        <div class="box">
+          <h3>follow me</h3>
+          <a href="https://twitter.com/TirtharajBarma"
+            ><i class="fab fa-twitter"></i>twitter</a
+          >
+          <a href="https://www.instagram.com/_t.irth.a_/"
+            ><i class="fab fa-instagram"></i>instagram</a
+          >
+          <a href="https://www.linkedin.com/in/tirtharaj-barma-327940236/"
+            ><i class="fab fa-linkedin"></i>linkedin</a
+          >
+          <a href="https://github.com/TirtharajBarma"
+            ><i class="fab fa-github"></i>github</a
+          >
+        </div>
+      </div>
+      <div class="credit">
+        created by <span>Tirtharaj Barma</span> | all right reserved.
+      </div>
+    </section>
 
     <script>
       window.onscroll = function () {

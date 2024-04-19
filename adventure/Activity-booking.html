@@ -1,101 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Booking Form</title>
     <!-- Bootstrap CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="/style.css" />
     <style>
-        /* Custom styles */
-        .custom-bg {
-            background-color: #f8f9fa;
-        }
+      /* Custom styles */
+      .custom-bg {
+        background-color: #f8f9fa;
+      }
 
+      body {
+        font-size: 1.5rem;
+      }
+
+      h2 {
+        font-size: 5rem;
+        font-weight: 500;
+        margin-bottom: 2.5rem;
+      }
+
+      p {
+        font-size: 15px;
+        margin-bottom: 2rem;
+      }
+
+      /* Flexbox */
+      .row-eq-height {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .card {
+        margin-left: 20%;
+        width: 90%;
+      }
+
+      .img-wrapper {
+        height: 100%;
+        position: relative; /* Added */
+      }
+
+      .img-wrapper img {
+        object-fit: cover;
+        height: 550px;
+        width: 400px;
+      }
+
+      /* Added styles for text overlay */
+      .overlay-text {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 15px;
+      }
+
+      /* Center content horizontally */
+      .d-flex-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        margin-top: 130px;
+        margin-left: 220px;
+        margin-bottom: 100px;
+      }
+
+      .form-control {
+        height: 40px;
+        width: 100%;
+      }
+
+      ::placeholder {
+        font-size: 13px;
+      }
+
+      h3 {
+        font-size: 2.5rem;
+      }
+
+      @media only screen and (max-width: 768px) {
         body {
-            font-size: 1.5rem;
+          font-size: 1.2rem;
         }
 
         h2 {
-            font-size: 5rem;
-            font-weight: 500;
-            margin-bottom: 2.5rem;
-        }
-
-        p {
-            font-size: 15px;
-            margin-bottom: 2rem;
-        }
-
-        /* Flexbox */
-        .row-eq-height {
-            display: flex;
-            flex-wrap: wrap;
+          font-size: 3.5rem;
+          margin-bottom: 1.5rem;
         }
 
         .card {
-            margin-left: 20%;
-            width: 90%;
-        }
-
-        .img-wrapper {
-            height: 100%;
-            position: relative; /* Added */
+          margin-left: auto;
+          margin-right: auto;
+          width: 90%;
         }
 
         .img-wrapper img {
-            object-fit: cover;
-            height: 550px;
-            width: 400px;
-        }
-
-        /* Added styles for text overlay */
-        .overlay-text {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            padding: 15px;
-        }
-
-        /* Center content horizontally */
-        .d-flex-center {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+          height: auto;
+          width: 100%;
         }
 
         .container {
-            margin-top: 130px;
-            margin-left: 220px;
-            margin-bottom: 100px;
+          margin-top: 80px;
+          margin-left: 10px;
+          margin-right: 10px;
+          margin-bottom: 50px;
         }
 
         .form-control {
-            height: 40px;
-            width: 100%;
+          height: 40px;
         }
 
-        ::placeholder {
-            font-size: 13px;
+        .col-md-6 {
+          margin-bottom: 20px;
+        }
+      }
+
+      @media only screen and (max-width: 576px) {
+        h2 {
+          font-size: 2.5rem;
         }
 
-        h3 {
-            font-size: 2.5rem;
+        .container {
+          margin-top: 60px;
         }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <header class="header" id="header">
+      <a href="#" class="logo"><i class="fas fa-hiking"></i> JourneyScape </a>
 
-<header class="header" id="header">
-    <a href="#" class="logo"><i class="fas fa-hiking"></i> JourneyScape </a>
-
-    <nav class="navbar">
+      <nav class="navbar">
         <div id="nav-close" class="fas fa-times"></div>
         <a href="/index.html">home</a>
         <a href="/about.html">about</a>
@@ -103,98 +158,114 @@
         <a href="/package.html">packages</a>
         <a href="/index.html#reviews">review</a>
         <a href="#blogs">blogs</a>
-    </nav>
+      </nav>
 
-    <div class="icons">
+      <div class="icons">
         <div id="menu-btn" class="fas fa-bars"></div>
         <a href="#shop" class="fas fa-shopping-cart"></a>
         <div id="search-btn" class="fas fa-search"></div>
         <div
-                id="user"
-                class="fa-regular fa-user"
-                onclick="redirectToRegistration()"
+          id="user"
+          class="fa-regular fa-user"
+          onclick="redirectToRegistration()"
         ></div>
-    </div>
-</header>
+      </div>
+    </header>
 
-
-<div class="container py-5">
-    <div class="row row-eq-height">
+    <div class="container py-5">
+      <div class="row row-eq-height">
         <!-- Left Column - Content Form -->
         <div class="col-md-6 d-flex align-items-stretch">
-            <div
-                    class="card custom-bg p-3 d-flex flex-column justify-content-between"
-            >
-                <div>
-                    <h2>Book your Next Activity</h2>
-                    <p>
-                        Explore our curated selection of unique travel experience and plan your perfect gateway.
-                    </p>
-                    <form id="bookingForm" onsubmit="return validateForm()">
-                        <div class="form-group">
-                            <label for="destination">Activity: </label>
-                            <input
-                                    type="text"
-                                    class="form-control"
-                                    id="destination"
-                                    placeholder="Enter interested Activity"
-                                    required
-                            />
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-12">
-                                <label for="checkin">Date: </label>
-                                <input type="date" class="form-control" id="checkin" required />
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="guests">Guests:</label>
-                            <select class="form-control" id="guests" required>
-                                <option value="">Select Number of Guests</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Book Now</button>
-                    </form>
+          <div
+            class="card custom-bg p-3 d-flex flex-column justify-content-between"
+          >
+            <div>
+              <h2>Book your Next Activity</h2>
+              <p>
+                Explore our curated selection of unique travel experience and
+                plan your perfect gateway.
+              </p>
+              <form id="bookingForm" onsubmit="return validateForm()">
+                <div class="form-group">
+                  <label for="destination">Activity: </label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="destination"
+                    placeholder="Enter interested Activity"
+                    required
+                  />
                 </div>
+                <div class="form-row">
+                  <div class="form-group col-md-12">
+                    <label for="checkin">Date: </label>
+                    <input
+                      type="date"
+                      class="form-control"
+                      id="checkin"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="guests">Guests:</label>
+                  <select class="form-control" id="guests" required>
+                    <option value="">Select Number of Guests</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+                <button
+                  type="submit"
+                  class="btn btn-primary"
+                  onclick="successful_alert()"
+                >
+                  Book Now
+                </button>
+              </form>
             </div>
+          </div>
         </div>
 
         <!-- Right Column - Image -->
         <div class="col-md-6 mt-3 mt-md-0 d-flex align-items-stretch">
-            <div class="img-wrapper d-flex-center">
-                <img
-                        src="https://images.pexels.com/photos/2749500/pexels-photo-2749500.jpeg?auto=compress&cs=tinysrgb&w=800"
-                        class="img-fluid"
-                        alt="Adventure Image"
-                />
-                <!-- Added text overlay -->
-                <div class="overlay-text">
-                    <h3>Explore the world</h3>
-                    <p>Find your next adventure</p>
-                </div>
+          <div class="img-wrapper d-flex-center">
+            <img
+              src="https://images.pexels.com/photos/2749500/pexels-photo-2749500.jpeg?auto=compress&cs=tinysrgb&w=800"
+              class="img-fluid"
+              alt="Adventure Image"
+            />
+            <!-- Added text overlay -->
+            <div class="overlay-text">
+              <h3>Explore the world</h3>
+              <p>Find your next adventure</p>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
 
-<script>
-    function validateForm() {
+    <script>
+      function validateForm() {
         var destination = document.getElementById("destination").value;
         var checkin = document.getElementById("checkin").value;
         var checkout = document.getElementById("checkout").value;
         var guests = document.getElementById("guests").value;
 
-        if (destination == "" || checkin == "" || checkout == "" || guests == "") {
-            alert("All fields must be filled out");
-            return false;
+        if (
+          destination == "" ||
+          checkin == "" ||
+          checkout == "" ||
+          guests == ""
+        ) {
+          alert("All fields must be filled out");
+          return false;
         }
         return true;
-    }
+      }
 
       window.onscroll = function () {
         scrollFunction();
@@ -220,11 +291,14 @@
         window.location.href =
           "mailto:your@email.com?subject=Inquiry%20About%20Bungee%20Jumping&body=Dear%20Team,%0A%0AI%20am%20interested%20in%20learning%20more%20about%20your%20Bungee%20Jumping%20packages.%20Please%20provide%20me%20with%20more%20information.%0A%0AThank%20you,%0A[Your%20Name]";
       }
-</script>
+      function successful_alert() {
+        alert("booking successful!!!");
+      }
+    </script>
 
-<!-- Bootstrap JS and dependencies -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
 </html>

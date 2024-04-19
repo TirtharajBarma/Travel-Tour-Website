@@ -230,6 +230,146 @@
         animation-duration: 1s;
         animation-delay: 0.5s;
         animation-fill-mode: both;
+        margin-bottom: 5%;
+      }
+
+      .footer a{
+        text-decoration: none;
+      }
+
+      @media only screen and (max-width: 768px) {
+        .half-image {
+          width: 100%;
+          margin-left: 0;
+          height: 50vh;
+        }
+
+        .half-content {
+          padding: 2rem;
+        }
+
+        .container-fluid,
+        .container-fluid-second {
+          margin-top: 20%;
+        }
+
+        .container-fluid h1,
+        .container-fluid-second h1 {
+          font-size: 3rem;
+        }
+
+        .container-fluid p,
+        .container-fluid-second p {
+          font-size: 1.2rem;
+        }
+
+        .btn-group {
+          width: 100%;
+          margin-top: 20px
+        }
+
+        .btn-book-now,
+        .btn-contact-us {
+          margin: 10px 5px;
+        }
+
+        .image-container img {
+          width: 80px;
+          height: 80px;
+          margin: 0 10px;
+        }
+
+        .next-section {
+          margin-top: 20%;
+        }
+      }
+
+      @media only screen and (max-width: 576px) {
+        .logo {
+          font-size: 2rem;
+        }
+
+        .navbar a {
+          font-size: 1.5rem;
+        }
+
+        .header {
+          padding: 1rem 5%;
+        }
+
+        .next-section h1 {
+          font-size: 2rem;
+        }
+
+        .next-section p {
+          font-size: 1rem;
+        }
+
+        .footer {
+          padding: 2rem 0;
+        }
+
+        .footer .box-container {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .footer .box {
+          text-align: center;
+          margin-bottom: 2rem;
+        }
+
+        .footer .box h3 {
+          margin-bottom: 1rem;
+        }
+
+        .footer .box a {
+          display: block;
+          margin-bottom: 0.5rem;
+        }
+
+        .footer .credit {
+          text-align: center;
+          margin-top: 2rem;
+        }
+      }
+
+      @media only screen and (max-width: 768px) {
+        .next-section {
+          margin-top: 20%;
+        }
+
+        .next-section h1 {
+          font-size: 3rem;
+        }
+
+        .next-section p {
+          font-size: 1.2rem;
+          margin-bottom: 20px;
+        }
+
+        .image-container img {
+          width: 60px;
+          height: 60px;
+          margin: 0 5px;
+        }
+      }
+
+      @media only screen and (max-width: 576px) {
+        .next-section h1 {
+          font-size: 2rem;
+        }
+
+        .next-section p {
+          font-size: 1rem;
+          margin-bottom: 15px;
+        }
+
+        .image-container img {
+          width: 40px;
+          height: 40px;
+          margin: 0 3px;
+        }
       }
     </style>
   </head>
@@ -249,7 +389,7 @@
 
       <div class="icons">
         <div id="menu-btn" class="fas fa-bars"></div>
-        <a href="#shop" class="fas fa-shopping-cart"></a>
+        <a href="/index.html" class="fas fa-shopping-cart"></a>
         <div id="search-btn" class="fas fa-search"></div>
         <div
           id="user"
@@ -359,6 +499,58 @@
       </div>
     </div>
 
+    <section class="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>quick links</h3>
+          <a href="/index.html">home</a>
+          <a href="/about.html">about</a>
+          <a href="/index.html#shop">shop</a>
+          <a href="/package.html">packages</a>
+          <a href="/index.html#reviews">review</a>
+          <a href="/blogs.html">blogs</a>
+        </div>
+
+        <div class="box">
+          <h3>extra links</h3>
+          <a href="/registration.html">my account</a>
+          <a href="#shop">my order</a>
+          <a href="#shop">my wishlist</a>
+          <a href="#">privacy policy</a>
+        </div>
+
+        <div class="box">
+          <h3>contact info</h3>
+          <a href="#"><i class="fas fa-phone"></i>+91-978-009-2341</a>
+          <a href="mailto:barmatirtharaj@gmail.com"
+            ><i class="fas fa-envelope"></i>barmatirtharaj@gmail.com</a
+          >
+          <a href="https://maps.google.com/?q=Phagwara, India 140001"
+            ><i class="fas fa-map"></i>Phagwara, India 140001</a
+          >
+        </div>
+
+        <div class="box">
+          <h3>follow me</h3>
+          <a href="https://twitter.com/TirtharajBarma"
+            ><i class="fab fa-twitter"></i>twitter</a
+          >
+          <a href="https://www.instagram.com/_t.irth.a_/"
+            ><i class="fab fa-instagram"></i>instagram</a
+          >
+          <a href="https://www.linkedin.com/in/tirtharaj-barma-327940236/"
+            ><i class="fab fa-linkedin"></i>linkedin</a
+          >
+          <a href="https://github.com/TirtharajBarma"
+            ><i class="fab fa-github"></i>github</a
+          >
+        </div>
+      </div>
+      <div class="credit">
+        created by <span>Tirtharaj Barma</span> | all right reserved.
+      </div>
+    </section>
+
     <script>
       function redirectToIndex() {
         window.location.href = "Activity-booking.html";
@@ -382,7 +574,7 @@
       }
 
       function redirectToRegistration() {
-        window.location.href = "";
+        window.location.href = "/index.html";
       }
 
       function openContactForm() {
