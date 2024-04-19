@@ -568,12 +568,177 @@ section{
     }
 }
 
+/* blogs */
+.blogs{
+    margin-top: 8%;
+    background: var(--light-bg);
+
+    .slide{
+        text-align: center;
+        width: 35rem;
+        padding: 2rem;
 
 
+        img{
+            height: 25rem;
+            width: 100%;
+            object-fit: cover;
+            border-radius: .5rem;
+        }
+
+        .icons{
+            background: var(--black-color);
+            border-radius: .5rem;
+            padding: 1rem;
+            position: relative;
+            top: -2rem;
+            display: inline-block;
+
+            a{
+                font-size: 1.4rem;
+                color: var(--white-color);
+                margin: 0 1rem;
+
+                &:hover{
+                    color: var(--green-color);
+                }
+
+                i{
+                    padding-right: .5rem;
+                    color: var(--green-color);
+                }
+            }
+        }
+
+        h3{
+            font-size: 2rem;
+            color: var(--black-color);
+        }
+
+        p{
+            font-size: 1.4rem;
+            padding: 1rem 0;
+            line-height: 2;
+            color: var(--black-color);
+        }
+    }
+}
 
 
+/* newsletter */
+.newsletter{
+    background: var(--light-bg);
 
+    .content{
+        max-width: 70rem;
+        margin: 1rem auto;
+        text-align: center;
 
+        p{
+            font-size: 1.5rem;
+            line-height: 2;
+            color: var(--black-color);
+        }
+
+        form{
+            margin-top: 2rem;
+            background: var(--white-color);
+            border-radius: 5rem;
+            border: var(--border);
+            padding: .7rem;
+            display: flex;
+
+            .email{
+                width: 100%;
+                background: none;
+                text-transform: none;
+                font-size: 1.6rem;
+                color: var(--black-color);
+                padding: 0 1.3rem;
+            }
+
+            .btn{
+                margin-top: 0;
+                border-radius: 5rem;
+                background: var(--black-color);
+                color: var(--white-color);
+
+                &:hover{
+                    background: none;
+                    color: var(--black-color);
+                }
+            }
+        }
+    }
+}
+
+/* clients */
+.clients{
+
+    .slide{
+        text-align: center;
+
+        img{
+            height: 12rem;
+        }
+    }
+}
+
+/* footer */
+.footer{
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg?auto=compress&cs=tinysrgb&w=800) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    .box-container{
+        display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 3rem;
+        
+        .box{
+            h3{
+                font-size: 2rem;
+                padding: 1.5rem 0;
+                color: var(--white-color);
+            }
+
+            a{
+                display: block;
+                font-size: 1.4rem;
+                color: var(--white-color);
+                padding: 1rem 0;
+
+                i{
+                    color: var(--green-color);
+                    padding-right: .5rem;
+                }
+
+                &:hover{
+                    color: var(--green-color);
+                }
+
+                i{
+                    padding-right: 2rem;
+                }
+            }
+        }
+    }
+
+    .credit{
+        text-align: center;
+        margin-top: 2.5rem;
+        padding: 1rem;
+        padding-top: 2.5rem;
+        font-size: 2rem;
+        color: var(--white-color);
+
+        span{
+            color: var(--green-color);
+        }
+    }
+
+}
 
 
 
@@ -676,3 +841,27 @@ section{
     }
 }
 
+/* for blog section */
+@media screen and (max-width: 768px) {
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .slide {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
