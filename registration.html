@@ -100,7 +100,7 @@
   </div>
   <script>
     document.getElementById("signup-form").addEventListener("submit", function(event) {
-      // Prevent the form from submitting if validation fails
+
       event.preventDefault();
 
       // Get form values
@@ -115,11 +115,11 @@
 
       // Check if all fields are filled
       if (name && email && password && confirmPassword && terms) {
-        // Check if email is valid
+
         if (emailRegex.test(email)) {
-          // Check if password and confirm password match
+
           if (password === confirmPassword) {
-            // If all validations pass, redirect to login.html
+
             window.location.href = './login.html';
           } else {
             alert("Password and confirm password do not match");
