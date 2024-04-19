@@ -88,29 +88,29 @@
     <p>Don't have an account? <a href="./registration.html">Sign up</a></p>
   </div>
   <script>
-    // Function to check if the email is valid
-    function isValidEmail(email) {
-      return /\S+@\S+\.\S+/.test(email);
-    }
-
-    // Add event listener to the login button
-    document.getElementById('login-btn').addEventListener('click', function(event) {
-      // Prevent the default form submission
-      event.preventDefault();
-      
-      // Get the email and password fields
-      var emailField = document.getElementById('email');
-      var passwordField = document.getElementById('password');
-      
-      // Check if email and password fields are not empty and the email is valid
-      if (emailField.value.trim() === '' || !isValidEmail(emailField.value) || passwordField.value.trim() === '') {
-        // Display an error message
-        alert('Please enter a valid email address and password.');
-      } else {
-        // Redirect to index.html
-        window.location.href = 'index.html';
+      // Function to check if the email is valid
+      function isValidEmail(email) {
+        return /\S+@\S+\.\S+/.test(email);
       }
-    });
+
+      // Add event listener to the login button
+      document.getElementById('login-btn').addEventListener('click', function(event) {
+        // Prevent the default form submission
+        event.preventDefault();
+        
+        // Get the email and password fields
+        var emailField = document.getElementById('email');
+        var passwordField = document.getElementById('password');
+        
+        // Check if email and password fields are not empty and the email is valid
+        if (emailField.value.trim() === '' || !isValidEmail(emailField.value) || passwordField.value.trim() === '') {
+          // Display an error message
+          alert('Please enter a valid email address and password.');
+        } else {
+          // Redirect to index.html
+          window.location.href = 'index.html';
+        }
+      });
   </script>
 </body>
 </html>
