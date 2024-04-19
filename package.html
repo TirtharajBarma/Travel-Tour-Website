@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Packages</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <style>
+      .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 2rem 9%;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+        transition: background-color 0.3s ease; /* Add transition effect for background-color */
+      }
+
+      .header.active {
+        background-color: #fff; /* Change background color to white when active */
+      }
+
+      .header.active .logo,
+      .header.active .navbar a,
+      .header.active .icons a,
+      .header.active .icons div {
+        color: var(--black-color); /* Change text color to black when active */
+      }
+
+      .logo {
+        margin-right: auto;
+        font-size: 2.5rem;
+        color: var(--black-color);
+        font-weight: bolder;
+      }
+
+      .logo i {
+        color: var(--green-color);
+      }
+
+      .navbar a {
+        margin-left: 2rem;
+        font-size: 1.7rem;
+        color: var(--black-color);
+      }
+
+      .navbar a:hover {
+        color: var(--green-color);
+      }
+
+      #nav-close {
+        font-size: 3.5rem;
+        cursor: pointer;
+        color: var(--black-color);
+        display: none;
+      }
+
+      .packages {
+        padding-top: 10%;
+      }
+
+      @media only screen and (max-width: 768px) {
+  .packages {
+    padding-top: 30%;
+
+  }
+
+  .navbar {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+
+  .header.active .navbar {
+    display: flex;
+  }
+
+  .navbar a {
+    margin: 1rem 0;
+  }
+
+  .icons {
+    display: none;
+  }
+
+  #nav-close {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+}
+
+
+
+
+      
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="logo"><i class="fas fa-hiking"></i> JourneyScape </a>
+
+      <nav class="navbar">
+        <div id="nav-close" class="fas fa-times"></div>
+        <a href="/index.html">home</a>
+        <a href="/about.html">about</a>
+        <a href="/index.html#shop">shop</a>
+        <a href="#packages">packages</a>
+        <a href="/index.html#reviews">review</a>
+        <a href="/blogs.html">blogs</a>
+      </nav>
+
+      <div class="icons">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <a href="/index.html#shop" class="fas fa-shopping-cart"></a>
+        <div id="search-btn" class="fas fa-search"></div>
+        <div
+          id="user"
+          class="fa-regular fa-user"
+          onclick="redirectToRegistration()"
+        ></div>
+      </div>
+    </header>
+
+    <div class="search-form">
+      <div id="close-search" class="fas fa-times"></div>
+
+      <form action="">
+        <input
+          type="search"
+          name=""
+          id="search-box"
+          placeholder="search here..."
+        />
+        <label for="search-box" class="fas fa-search"></label>
+      </form>
+    </div>
+
+    <section class="packages" id="packages">
+      <h1 class="heading">popular packages</h1>
+
+      <div class="box-container">
+        <div class="box">
+          <div class="image">
+            <img
+              src="https://images.pexels.com/photos/11024977/pexels-photo-11024977.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              alt=""
+            />
+          </div>
+          <div class="content">
+            <h3>Kashmir</h3>
+            <p>
+              Known as "Paradise on Earth," Kashmir is famous for its
+              breathtaking landscapes.
+            </p>
+            <div class="price">₹40,000 - ₹60,000 per person</div>
+            <a href="/packages/kashmir.html" class="btn">explore now</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img
+              src="https://i.pinimg.com/474x/6a/99/ee/6a99ee843798375c5f7049316e8d31ed.jpg"
+              alt=""
+            />
+          </div>
+          <div class="content">
+            <h3>Paris</h3>
+            <p>
+              Paris, the capital of France, is renowned for its iconic landmarks
+              such as the Eiffel Tower.
+            </p>
+            <div class="price">₹1,00,000 - ₹1,50,000 per person</div>
+            <a href="/packages/paris.html" class="btn">explore now</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img
+              src="https://i.pinimg.com/474x/39/c4/09/39c40905a6660da57a6d22d2f13a8890.jpg"
+              alt=""
+            />
+          </div>
+          <div class="content">
+            <h3>Dubai</h3>
+            <p>
+              Dubai is a dazzling metropolis known for its futuristic
+              architecture, luxury shopping malls.
+            </p>
+            <div class="price">₹70,000 - ₹90,000 per person</div>
+            <a href="/packages/dubai.html" class="btn">explore now</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img
+              src="https://i.pinimg.com/474x/d4/31/c5/d431c50fa71abf102e90542100068a76.jpg"
+              alt=""
+            />
+          </div>
+          <div class="content">
+            <h3>Amsterdam</h3>
+            <p>
+              Amsterdam is famous for its picturesque canals, historic
+              buildings, and artistic heritage.
+            </p>
+            <div class="price">₹80,000 - ₹1,00,000 per person</div>
+            <a href="/packages/amsterdam.html" class="btn">explore now</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img
+              src="https://i.pinimg.com/474x/d5/ab/cb/d5abcbef5af09c8199a4ba06cbfaf6e7.jpg"
+              alt=""
+            />
+          </div>
+          <div class="content">
+            <h3>Australia</h3>
+            <p>
+              Australia offers diverse experiences, from the iconic Sydney Opera
+              House and Harbour.
+            </p>
+            <div class="price">₹2,00,000 - ₹3,00,000 per person</div>
+            <a href="/packages/australia.html" class="btn">explore now</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img
+              src="https://i.pinimg.com/564x/91/16/1c/91161c6f85ba8044fcc2beab4c19b0eb.jpg"
+              alt=""
+            />
+          </div>
+          <div class="content">
+            <h3>Japan</h3>
+            <p>
+              Japan seamlessly blends ancient traditions with modern innovation.
+            </p>
+            <div class="price">₹1,50,000 - ₹2,00,000 per person</div>
+            <a href="/packages/japan.html" class="btn">explore now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>quick links</h3>
+          <a href="/index.html">home</a>
+          <a href="/about.html">about</a>
+          <a href="/index.html#shop">shop</a>
+          <a href="/package.html">packages</a>
+          <a href="/index.html#reviews">review</a>
+          <a href="/blogs.html">blogs</a>
+        </div>
+
+        <div class="box">
+          <h3>extra links</h3>
+          <a href="/registration.html">my account</a>
+          <a href="#shop">my order</a>
+          <a href="#shop">my wishlist</a>
+          <a href="#">privacy policy</a>
+        </div>
+
+        <div class="box">
+          <h3>contact info</h3>
+          <a href="#"><i class="fas fa-phone"></i>+91-978-009-2341</a>
+          <a href="mailto:barmatirtharaj@gmail.com"
+            ><i class="fas fa-envelope"></i>barmatirtharaj@gmail.com</a
+          >
+          <a href="https://maps.google.com/?q=Phagwara, India 140001"
+            ><i class="fas fa-map"></i>Phagwara, India 140001</a
+          >
+        </div>
+
+        <div class="box">
+          <h3>follow me</h3>
+          <a href="https://twitter.com/TirtharajBarma"
+            ><i class="fab fa-twitter"></i>twitter</a
+          >
+          <a href="https://www.instagram.com/_t.irth.a_/"
+            ><i class="fab fa-instagram"></i>instagram</a
+          >
+          <a href="https://www.linkedin.com/in/tirtharaj-barma-327940236/"
+            ><i class="fab fa-linkedin"></i>linkedin</a
+          >
+          <a href="https://github.com/TirtharajBarma"
+            ><i class="fab fa-github"></i>github</a
+          >
+        </div>
+      </div>
+      <div class="credit">
+        created by <span>Tirtharaj Barma</span> | all right reserved.
+      </div>
+    </section>
+
+    <script src="/script.js"></script>
+
+    <script>
+      window.onscroll = () => {
+        const header = document.querySelector(".header");
+        if (window.scrollY > 0) {
+          header.classList.add("active");
+        } else {
+          header.classList.remove("active");
+        }
+      };
+
+      window.onload = () => {
+        const header = document.querySelector(".header");
+        if (window.scrollY > 0) {
+          header.classList.add("active");
+        } else {
+          header.classList.remove("active");
+        }
+      };
+
+      function redirectToRegistration() {
+        window.location.href = "registration.html";
+      }
+    </script>
+  </body>
+</html>
