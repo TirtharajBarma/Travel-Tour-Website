@@ -20,8 +20,6 @@
     />
     <link rel="stylesheet" href="/style.css" />
     <style>
-      /* Custom CSS */
-
       :root {
         --green-color: #219150;
         --black-color: #10221b;
@@ -36,20 +34,19 @@
       }
 
       .half-image {
-        width: calc(40% - 100px); /* Adjust the width as needed */
-        height: 70vh; /* Adjust the height as needed */
-        background-image: url("https://media.istockphoto.com/id/1070181118/photo/whitewater-kayaking-extreme-kayaking-a-guy-in-a-kayak-sails-on-a-mountain-river.jpg?s=612x612&w=0&k=20&c=DvIrUla0OpwBmSVlIxETO-rJDGDVHvPu1_qw0gSjJmU="); /* Replace 'sharks.jpg' with your image path */
+        width: calc(40% - 100px);
+        height: 70vh;
+        background-image: url("https://media.istockphoto.com/id/1070181118/photo/whitewater-kayaking-extreme-kayaking-a-guy-in-a-kayak-sails-on-a-mountain-river.jpg?s=612x612&w=0&k=20&c=DvIrUla0OpwBmSVlIxETO-rJDGDVHvPu1_qw0gSjJmU="); 
         background-size: cover;
-        background-position: center top; /* Adjust the image position from top */
-        margin-left: 100px; /* Adjust the gap size */
+        background-position: center top;
+        margin-left: 100px;
       }
 
       .half-content {
-        height: 70vh; /* Full height of viewport */
+        height: 70vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        /* align-items: center; */
       }
 
       .container-fluid {
@@ -57,63 +54,6 @@
         background-color: #eee;
       }
 
-      .header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        padding: 2rem 9%;
-        z-index: 1000;
-        display: flex;
-        align-items: center;
-        background-color: transparent;
-        transition: background-color 0.3s ease; /* Add transition effect for background-color */
-      }
-
-      .header.active {
-        background-color: #fff; /* Change background color to white when active */
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow when active */
-      }
-
-      .header.active .logo,
-      .header.active .navbar a,
-      .header.active .icons a,
-      .header.active .icons div {
-        color: var(--black-color); /* Change text color to black when active */
-      }
-
-      .logo {
-        margin-right: auto;
-        font-size: 2.5rem;
-        color: var(--black-color);
-        font-weight: bolder;
-        text-decoration: none;
-      }
-
-      .logo i {
-        color: var(--green-color);
-      }
-
-      .navbar a {
-        margin-left: 2rem;
-        font-size: 1.7rem;
-        color: var(--black-color);
-        text-decoration: none;
-      }
-
-      .navbar a:hover {
-        color: var(--green-color);
-      }
-
-      #nav-close {
-        font-size: 3.5rem;
-        cursor: pointer;
-        color: var(--black-color);
-        display: none;
-      }
-
-      /* Button styling */
-      /* Button styling */
       .btn-group {
         display: flex;
         justify-content: space-between;
@@ -128,8 +68,8 @@
         border-radius: 5px;
         cursor: pointer;
         outline: none;
-        flex: 1; /* Make the buttons take equal space */
-        margin: 0 5px; /* Adjust margin to remove gap */
+        flex: 1;
+        margin: 0 5px;
       }
 
       .btn-book-now {
@@ -232,9 +172,10 @@
         margin-bottom: 5%;
       }
 
-      .footer a{
+      .footer a {
         text-decoration: none;
       }
+
       @media only screen and (max-width: 768px) {
         .half-image {
           width: 100%;
@@ -246,7 +187,10 @@
           padding: 2rem;
         }
 
-        .container-fluid,
+        .container-fluid{
+          margin-top: 30%;
+        }
+
         .container-fluid-second {
           margin-top: 20%;
         }
@@ -283,18 +227,6 @@
       }
 
       @media only screen and (max-width: 576px) {
-        .logo {
-          font-size: 2rem;
-        }
-
-        .navbar a {
-          font-size: 1.5rem;
-        }
-
-        .header {
-          padding: 1rem 5%;
-        }
-
         .next-section h1 {
           font-size: 2rem;
         }
@@ -369,6 +301,12 @@
           margin: 0 3px;
         }
       }
+
+      .header a,
+      .navbar a{
+        text-decoration: none;
+      }
+
     </style>
   </head>
   <body>
