@@ -1,8 +1,4 @@
 # Travel-Tour-Website
-![GitHub repo size](https://img.shields.io/github/repo-size/codewithsadee/tourly)
-![GitHub stars](https://img.shields.io/github/stars/codewithsadee/tourly?style=social)
-![GitHub forks](https://img.shields.io/github/forks/codewithsadee/tourly?style=social)
-[![Twitter Follow](https://img.shields.io/twitter/follow/codewithsadee_?style=social)](https://twitter.com/intent/follow?screen_name=codewithsadee_)
 
 Welcome to our Travel Tour Website! This repository contains the source code for our exciting travel website.
 
