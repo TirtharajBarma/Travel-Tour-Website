@@ -26,7 +26,7 @@
             <a href="#shop">shop</a>
             <a href="/package.html">packages</a>
             <a href="#reviews">review</a>
-            <a href="#blogs">blogs</a>
+            <a href="/blogs.html">blogs</a>
         </nav>
 
         <div class="icons">
@@ -410,6 +410,72 @@
     </section>
 
 
+    <!-- newsletter -->
+    <section class="newsletter">
+        <div class="content">
+            <h1 class="heading">subscribe now</h1>
+            <p>Subscribe for exclusive travel deals, tips, and inspiration straight to your inbox! Don't miss out, join now!</p>
+
+            <form action="">
+                <input type="email" placeholder="enter your email" name="" id="" class="email">
+                <input type="submit" value="subscribe" class="btn">
+            </form>
+        </div>
+    </section>
+
+    <!-- client -->
+    <section class="clients">
+        <div class="swiper clients-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide"><img src="https://img.freepik.com/free-vector/detailed-travel-logo_23-2148616611.jpg?w=1060&t=st=1713457034~exp=1713457634~hmac=6cc8097602ec2b54af0e33363517906211e66520052fe499235aabe36b91d62f" alt=""></div>
+                <div class="swiper-slide slide"><img src="https://i.pinimg.com/474x/f1/1b/95/f11b958ee588bf8e79be7cd82d4ac720.jpg" alt=""></div>
+                <div class="swiper-slide slide"><img src="https://i.pinimg.com/474x/7c/0b/53/7c0b53cb03fa063573537c1c31d2603d.jpg" alt=""></div>
+                <div class="swiper-slide slide"><img src="https://i.pinimg.com/474x/56/f8/4f/56f84fe769a1140021e7bfae307d0dff.jpg" alt=""></div>
+                <div class="swiper-slide slide"><img src="https://i.pinimg.com/474x/e8/5a/0f/e85a0f102eb07372872d3473740db6bc.jpg" alt=""></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#home">home</a>
+                <a href="/about.html">about</a>
+                <a href="#shop">shop</a>
+                <a href="/package.html">packages</a>
+                <a href="#reviews">review</a>
+                <a href="/blogs.html">blogs</a>
+            </div>
+
+            <div class="box">
+                <h3>extra links</h3>
+                <a href="/registration.html">my account</a>
+                <a href="#shop">my order</a>
+                <a href="#shop">my wishlist</a>
+                <a href="#">privacy policy</a>
+            </div>
+
+            <div class="box">
+                <h3>contact info</h3>
+                <a href="#"><i class="fas fa-phone"></i>+91-978-009-2341</a>
+                <a href="mailto:barmatirtharaj@gmail.com"><i class="fas fa-envelope"></i>barmatirtharaj@gmail.com</a>
+                <a href="https://maps.google.com/?q=Phagwara, India 140001"><i class="fas fa-map"></i>Phagwara, India 140001</a>
+            </div>
+
+            <div class="box">
+                <h3>follow me</h3>
+                <a href="https://twitter.com/TirtharajBarma"><i class="fab fa-twitter"></i>twitter</a>
+                <a href="https://www.instagram.com/_t.irth.a_/"><i class="fab fa-instagram"></i>instagram</a>
+                <a href="https://www.linkedin.com/in/tirtharaj-barma-327940236/"><i class="fab fa-linkedin"></i>linkedin</a>
+                <a href="https://github.com/TirtharajBarma"><i class="fab fa-github"></i>github</a>
+            </div>
+        </div>
+        <div class="credit">created by <span>Tirtharaj Barma</span> | all right reserved.</div>
+    </section>
+
 
 
 
@@ -417,6 +483,8 @@
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
+    
+    // for home swiper
     var swiper = new Swiper(".home-slider", {
         loop: true,
         grabCursor: true,
@@ -426,6 +494,7 @@
         },
     });
 
+    // for product swiper
     var swiper = new Swiper(".product-slider", {
         loop: true,
         grabCursor: true,
@@ -450,6 +519,7 @@
         },
     });
 
+    // for review swiper
     var swiper = new Swiper(".review-slider", {
         loop: true,
         grabCursor: true,
@@ -467,6 +537,28 @@
             },
             768: {
                 slidesPerView: 3,
+            },
+        },
+    });
+
+
+    //clients
+    var swiper = new Swiper(".clients-slider", {
+        loop: true,
+        grabCursor: true,
+        spaceBetween: 20,
+        breakpoints : {
+            0: {
+                slidesPerView: 1,
+            },
+            640: {
+                slidesPerView: 2,
+            },
+            768: {
+                slidesPerView: 3,
+            },
+            1024: {
+                slidesPerView: 4,
             },
         },
     });
